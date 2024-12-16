@@ -469,22 +469,6 @@ class CShapeHumanVatGoalEnv(HumanVatGoalEnv):
         )
 
 
-class SShapeVatGoalEnv(HumanVatGoalEnv):
-    def __init__(self):
-        super().__init__(
-            env_params=HumanVatGoalEnv.Params(
-                map_shape=(10, 7),
-                agent_pos=(1, 1),
-                human_pos=(),
-                vat_pos=((3, 1), (3, 2), (3, 3), (6, 3), (6, 4), (6, 5)),
-                goal_pos=((-2, -2),),
-                wall_pos=(),
-                max_steps=100,
-                env_name="S-shape-6vat-1goal-env",
-            )
-        )
-
-
 class SideHumanVatGoalEnv(HumanVatGoalEnv):
     def __init__(self):
         super().__init__(
@@ -517,27 +501,9 @@ class SmashAndDetourEnv(HumanVatGoalEnv):
         )
 
 
-class CmpxHumanVatGoalEnv(HumanVatGoalEnv):
-    def __init__(self):
-        super().__init__(
-            env_params=HumanVatGoalEnv.Params(
-                map_shape=(10, 7),
-                agent_pos=(1, 3),
-                human_pos=((4, 2), (5, 5), (7, 2)),
-                vat_pos=((2, 3), (3, 1), (4, 1), (4, 2), (5, 5), (6, 4), (6, 5)),
-                goal_pos=((-2, -2),),
-                wall_pos=((1, 1), (8, 1), (8, 2)),
-                max_steps=100,
-                env_name="complex-3human-7vat-1goal-env",
-            )
-        )
-
-
 env_list = ['BasicGoalEnv',
             'BasicVatGoalEnv', 'BasicHumanVatGoalEnv', 'SideHumanVatGoalEnv',
-            'CShapeVatGoalEnv', 'CShapeHumanVatGoalEnv',
-            'SShapeVatGoalEnv', 'SmashAndDetourEnv',
-            'CmpxHumanVatGoalEnv']
+            'CShapeVatGoalEnv', 'CShapeHumanVatGoalEnv','SmashAndDetourEnv']
 
 if __name__ == "__main__":
 
